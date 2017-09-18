@@ -1,11 +1,10 @@
 #!/opt/puppetlabs/puppet/bin/ruby
-
-require 'puppet'
 require 'json'
 require 'open3'
+require 'puppet'
 
 def set(setting, section, value)
-  cmd_string = "/opt/puppetlabs/puppet/bin/puppet config set #{setting} #{value}"
+  cmd_string = "puppet config set #{setting} #{value}"
   cmd_string << " --section #{section}" unless section.nil?
   _stdout, stderr, status = Open3.capture3(cmd_string)
   raise Puppet::Error, stderr if status != 0
@@ -13,18 +12,18 @@ def set(setting, section, value)
 end
 
 def get(setting, section, _value)
-  cmd_string = "/opt/puppetlabs/puppet/bin/puppet config print #{setting}"
+  cmd_string = "puppet config print #{setting}"
   cmd_string << " --section #{section}" unless section.nil?
   stdout, stderr, status = Open3.capture3(cmd_string)
   raise Puppet::Error, stderr if status != 0
   { status: stdout.strip, setting: setting, section: section }
 end
 
-args = JSON.parse(STDIN.read)
-action = args['action']
-setting = args['setting']
-section = args['section']
-value = args['value']
+params = JSON.parse(STDIN.read)
+action = params['action']
+setting = params['setting']
+section = params['section']
+value = params['value']
 section = 'main' if section.nil?
 
 begin
