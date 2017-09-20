@@ -4,86 +4,37 @@
 #### Table of Contents
 
 1. [Description](#description)
-2. [Setup - The basics of getting started with puppet_conf task](#setup)
-    * [Setup requirements](#setup-requirements)
+2. [Requirements](#requirements)
 3. [Usage - Configuration options and additional functionality](#usage)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+5. [Getting help - Some Helpful commands](#getting-help)
 
 ## Description
 
-This module provides the puppet_conf task. This allows you to change the configuration options in the puppet.conf file. For example changing the puppet master address. It requires Puppet 5 or bolt installed
+This module provides the puppet_conf task. This task allows you to inspect and change the configuration options in the `puppet.conf` file.
 
-## Setup
+## Requirements
 
-### Setup Requirements
-
-This module requires either Puppet enterprise or Bolt to function.
+This module requires Puppet Enterprise 2017.3 or later to be installed on the machine from which you are running task commands (the controller node). Machines receiving task requests must be Puppet agents.
 
 ## Usage
 
-There are a number of ways to execute the puppet_conf task. The examples below check the status of the httpd puppet_conf. 
+To run a puppet_conf task, use the task command, specifying the action and the name of the `puppet.conf` setting.
 
-VIA PE-console see link_here
+1. On the command line, run `puppet task puppet_conf <ACTION> <SETTING_NAME>`.
 
-Via BOLT more information here LINK
-```bolt
-bolt task puppet_conf status httpd
-```
+For example, to check the status of the Apache httpd setting in `puppet.conf`, run `puppet task puppet_conf status httpd`
 
-Via the PE CLI, more information here LINK
-
-```pe
-puppet task puppet_conf status httpd
-```
+You can also run tasks in the PE console. See PE task documentation for complete information.
 
 ## Reference
 
-To get the availible actions and parameters run
+To view the available actions and parameters, on the command line, run `puppet task show puppet_conf` or see the puppet_conf module page on the [Forge](https://forge.puppet.com/puppetlabs/puppet_conf/tasks).
 
-```pe
-puppet task show puppet_conf
-```
+For a complete list of puppet_conf [TODO: do you mean `puppet.conf`?] options, see the [`puppet.conf`](https://docs.puppet.com/puppet/latest/types/puppet_conf.html) documentation. [TODO: This page does not exist; were you trying to point to puppet.conf docs at https://docs.puppet.com/puppet/latest/config_file_main.html?]
 
-```bolt
-puppet task show puppet_conf
-```
+## Getting Help
 
-or go to https://forge.puppet.com/puppetlabs/puppet_conf/tasks
+To display help for the package task, run `puppet task show puppet_conf`
 
-For a complete list of optional puppet_conf options https://docs.puppet.com/puppet/latest/types/puppet_conf.html
-
-## Development
-
-Here is a quick how to get up and running 
-```
-git clone git@github.com:puppetlabs/puppet_conf.git
-```
-```
-bundle install --path .bundle/gems/
-```
-```
-BEAKER_destroy=no PUPPET_INSTALL_TYPE=pe BEAKER_PE_DIR=http://enterprise.delivery.puppetlabs.net/2017.3/ci-ready  BEAKER_PE_VER=2017.3.0-rc8-41-g4981bd3 BEAKER_set=centos7-pooler  bundle exec rspec spec/acceptance
-```
-
-This will spit out a vmpooler machine name you can ssh to
-
-```
-ssh -i ~/.ssh/id_rsa-acceptance root@<VMPOOLER HOSTNAME FROM ABOVE> 
-```
-
-show the status of the openssl puppet_conf (use the actual name of your node)
-```
-puppet task run puppet_conf --nodes cgx1boldbmbi3vn.delivery.puppetlabs.net action=status puppet_conf=httpd
-```
-
-display help for puppet_conf
-```
-puppet task show puppet_conf
-```
-
-show help for the task cli
-```
-puppet task run --help
-```
+To show help for the task CLI, run `puppet task run --help`
