@@ -29,7 +29,7 @@ You can also run tasks in the PE console. See PE task documentation for complete
 
 ## Reference
 
-To view the available actions and parameters, on the command line, run `puppet task show puppet_conf` or see the service module page on the [Forge](https://forge.puppet.com/puppetlabs/puppet_conf/tasks).
+To view the available actions and parameters, on the command line, run `puppet task show puppet_conf` or see the puppet_conf module page on the [Forge](https://forge.puppet.com/puppetlabs/puppet_conf/tasks).
 
 For a complete list of puppet_conf [TODO: do you mean `puppet.conf`?] options, see the [`puppet.conf`](https://docs.puppet.com/puppet/latest/types/puppet_conf.html) documentation. [TODO: This page does not exist; were you trying to point to puppet.conf docs at https://docs.puppet.com/puppet/latest/config_file_main.html?]
 
