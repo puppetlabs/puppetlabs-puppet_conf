@@ -1,11 +1,6 @@
-# Changelog
+## Release 0.1.1
+This is the initial release of the puppet_conf task.
 
-All notable changes to this project will be documented in this file.
-
-## Release 0.1.0
-
-**Features**
-
-**Bugfixes**
-
-**Known Issues**
+**Features
+- Provides the following actions get and set.
+- Allows specifying the section of the puppet_conf.
