@@ -15,15 +15,28 @@ This module provides the puppet_conf task. This task allows you to inspect and c
 
 ## Requirements
 
-This module requires Puppet Enterprise 2017.3 or later to be installed on the machine from which you are running task commands (the controller node). Machines receiving task requests must be Puppet agents.
+This module is compatible with Puppet Enterprise and Puppet Bolt.
+
+Puppet Enterprise 2017.3 or later has to be installed on the machine from which you are running task commands (the controller node). Machines receiving task requests must be Puppet agents.
+OR
+Puppet Bolt 0.3.2 or later has to be installed on the machine from which you are running task commands. Machines receiving task requests must have SSH or WinRM services enabled.
 
 ## Usage
 
-To run a puppet_conf task, use the task command, specifying the action and the name of the `puppet.conf` setting.
+To run a puppet_conf task, use the task command, specifying the action, section, and setting of the `puppet.conf` setting.
 
-1. On the command line, run `puppet task puppet_conf <ACTION> <SETTING_NAME>`.
+* With PE on the command line, run `puppet task run puppet_conf action=<ACTION> section=<SECTION> setting=<SETTING>`.
+* With Bolt on the command line, run `bolt task run puppet_conf action=<ACTION> section=<SECTION> setting=<SETTING>`.
 
-For example, to check the status of the Apache httpd setting in `puppet.conf`, run `puppet task puppet_conf status httpd`
+For example, to check the status of the agent graph setting in `puppet.conf`, run:
+
+* With PE, run `puppet task run puppet_conf action=get section=agent setting=graph --nodes neptune`
+* With Bolt, run `bolt task run puppet_conf action=get section=agent setting=graph --nodes neptune --modules ~/modules`
+
+To set the value of the agent graph setting in `puppet.conf`, specify a value with the `set` action:
+
+* With PE, run `puppet task run puppet_conf action=set section=agent setting=graph value=true --nodes neptune`
+* With Bolt, run `bolt task run puppet_conf action=set section=agent setting=graph value=true --nodes neptune --modules ~/modules`
 
 You can also run tasks in the PE console. See PE task documentation for complete information.
 
@@ -37,4 +50,4 @@ For a complete list of `puppet.conf` options, see the [`puppet.conf`](https://do
 
 To display help for the package task, run `puppet task show puppet_conf`
 
-To show help for the task CLI, run `puppet task run --help`
+To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
