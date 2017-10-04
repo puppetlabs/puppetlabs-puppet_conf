@@ -1,3 +1,9 @@
+## Release 0.1.3
+
+### Fixed
+- Fixed locales project name.
+- Fixed cli description.
+
 ## Release 0.1.2
 Readme update.
 
