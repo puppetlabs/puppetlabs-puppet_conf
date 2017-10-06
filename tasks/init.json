@@ -1,6 +1,5 @@
 {
   "description": "Inspect puppet agent configuration settings",
-  "supports_noop": true,
   "input_method": "stdin",
   "parameters": {
     "action": {
