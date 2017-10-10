@@ -3,6 +3,7 @@ Readme update.
 
 ## Fixed
 - Readme update.
+- noop metadata
 
 ## Release 0.1.3
 
