@@ -31,12 +31,12 @@ To run a puppet_conf task, use the task command, specifying the action, section,
 For example, to check the status of the agent graph setting in `puppet.conf`, run:
 
 * With PE, run `puppet task run puppet_conf action=get section=agent setting=graph --nodes neptune`
-* With Bolt, run `bolt task run puppet_conf action=get section=agent setting=graph --nodes neptune --modules ~/modules`
+* With Bolt, run `bolt task run puppet_conf action=get section=agent setting=graph --nodes neptune --modulepath ~/modules`
 
 To set the value of the agent graph setting in `puppet.conf`, specify a value with the `set` action:
 
 * With PE, run `puppet task run puppet_conf action=set section=agent setting=graph value=true --nodes neptune`
-* With Bolt, run `bolt task run puppet_conf action=set section=agent setting=graph value=true --nodes neptune --modules ~/modules`
+* With Bolt, run `bolt task run puppet_conf action=set section=agent setting=graph value=true --nodes neptune --modulepath ~/modules`
 
 You can also run tasks in the PE console. See PE task documentation for complete information.
 
