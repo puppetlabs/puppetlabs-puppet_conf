@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-puppet_conf",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "author": "puppet",
   "summary": "Tasks that manipulates a puppet configuration file",
   "license": "Apache-2.0",
