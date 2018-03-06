@@ -4,7 +4,7 @@ require 'open3'
 require 'puppet'
 
 def set(setting, section, value)
-  cmd = ['puppet','config','set']
+  cmd = %w[puppet config set]
   cmd += ['--section', section] if section
   cmd += [setting, value]
   _stdout, stderr, status = Open3.capture3(*cmd)
@@ -13,7 +13,7 @@ def set(setting, section, value)
 end
 
 def get(setting, section, _value)
-  cmd = ['puppet','config','print']
+  cmd = %w[puppet config print]
   cmd += ['--section', section]
   cmd += [setting]
   stdout, stderr, status = Open3.capture3(*cmd)
