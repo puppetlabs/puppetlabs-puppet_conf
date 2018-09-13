@@ -1,3 +1,9 @@
+## Release 0.2.1
+
+### Fixed
+
+- Improve the reliability of finding the `puppet` binary when puppet-agent is installed
+
 ## Release 0.2.0
 This release uses the PDK convert functionality which in return makes the module PDK compliant.
 
