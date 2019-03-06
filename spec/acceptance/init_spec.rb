@@ -9,12 +9,14 @@ describe 'puppet_conf task' do
       result = task_run('puppet_conf', 'action' => 'set', 'setting' => 'vardir', 'value' => '/tmp/bla')
 
       expect(result.first['status']).to eq 'success'
-      expect(result.first['result']).to include 'status' => '/tmp/bla', 'setting' => 'vardir', 'section' => 'main'
+      expect(result.first['result']['status']).to match %r{.*/tmp/bla}
+      expect(result.first['result']).to include 'setting' => 'vardir', 'section' => 'main'
 
       result = task_run('puppet_conf', 'action' => 'get', 'setting' => 'vardir')
 
       expect(result.first['status']).to eq 'success'
-      expect(result.first['result']).to include 'status' => '/tmp/bla', 'setting' => 'vardir', 'section' => 'main'
+      expect(result.first['result']['status']).to match %r{.*/tmp/bla}
+      expect(result.first['result']).to include 'setting' => 'vardir', 'section' => 'main'
     end
 
     it 'set/get a puppet configuration with section' do
