@@ -1,19 +1,32 @@
-# run a test task
 require 'spec_helper_acceptance'
 
 describe 'puppet_conf task' do
-  describe 'puppet configuration file' do
+  include Beaker::TaskHelper::Inventory
+  include BoltSpec::Run
+
+  describe 'puppet_conf' do
     it 'set/get a puppet configuration' do
-      result = run_task(task_name: 'puppet_conf', params: 'action=set setting=vardir value=/tmp/bla')
-      expect_multiple_regexes(result: result, regexes: [%r{setting.*vardir}, %r{status.*/tmp/bla}, %r{section.*main}, %r{Job completed. 1/1 nodes succeeded|Ran on 1 node}])
-      result = run_task(task_name: 'puppet_conf', params: 'action=get setting=vardir')
-      expect_multiple_regexes(result: result, regexes: [%r{setting.*vardir}, %r{status.*/tmp/bla}, %r{section.*main}, %r{Job completed. 1/1 nodes succeeded|Ran on 1 node}])
+      result = task_run('puppet_conf', 'action' => 'set', 'setting' => 'vardir', 'value' => '/tmp/bla')
+
+      expect(result.first['status']).to eq 'success'
+      expect(result.first['result']).to include 'status' => '/tmp/bla', 'setting' => 'vardir', 'section' => 'main'
+
+      result = task_run('puppet_conf', 'action' => 'get', 'setting' => 'vardir')
+
+      expect(result.first['status']).to eq 'success'
+      expect(result.first['result']).to include 'status' => '/tmp/bla', 'setting' => 'vardir', 'section' => 'main'
     end
+
     it 'set/get a puppet configuration with section' do
-      result = run_task(task_name: 'puppet_conf', params: 'action=set setting=storeconfigs value=false section=master')
-      expect_multiple_regexes(result: result, regexes: [%r{setting.*storeconfigs}, %r{status.*false}, %r{section.*master}, %r{Job completed. 1/1 nodes succeeded|Ran on 1 node}])
-      result = run_task(task_name: 'puppet_conf', params: 'action=get setting=storeconfigs section=master')
-      expect_multiple_regexes(result: result, regexes: [%r{setting.*storeconfigs}, %r{status.*false}, %r{section.*master}, %r{Job completed. 1/1 nodes succeeded|Ran on 1 node}])
+      result = task_run('puppet_conf', 'action' => 'set', 'setting' => 'storeconfigs', 'value' => 'false', 'section' => 'master')
+
+      expect(result.first['status']).to eq 'success'
+      expect(result.first['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
+
+      result = task_run('puppet_conf', 'action' => 'get', 'setting' => 'storeconfigs', 'section' => 'master')
+
+      expect(result.first['status']).to eq 'success'
+      expect(result.first['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
     end
   end
 end
