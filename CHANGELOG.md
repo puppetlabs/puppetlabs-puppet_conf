@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.3.1](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v0.3.1) (2019-04-04)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/0.3.0...v0.3.1)
+
+### Fixed
+
+- pdksync - \(FM-7655\) Fix rubygems-update for ruby \< 2.3 [\#46](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/46) ([tphoney](https://github.com/tphoney))
+
 ## [0.3.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/0.3.0) (2018-09-27)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/0.2.1...0.3.0)
@@ -9,6 +17,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Added
 
 - pdksync - \(FM-7392\) - Puppet 6 Testing Changes [\#40](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/40) ([pmcmaw](https://github.com/pmcmaw))
+- pdksync - \(MODULES-6805\) metadata.json shows support for puppet 6 [\#38](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/38) ([tphoney](https://github.com/tphoney))
 
 ## 0.2.1
 
