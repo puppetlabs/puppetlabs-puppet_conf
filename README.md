@@ -3,18 +3,26 @@
 
 #### Table of Contents
 
-1. [Description](#description)
-2. [Requirements](#requirements)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Getting help - Some Helpful commands](#getting-help)
+1. [Overview](#overview)
+2. [Module Description](#module-description)
+3. [Setup](#setup)
+     * [Requirements](#requirements)
+4. [Usage](#usage)
+5. [Reference](#reference)
+6. [Limitations](#limitations)
+7. [Development](#development)
 
-## Description
+## Overview
 
-This module provides the puppet_conf task. This task allows you to inspect and change the configuration options in the `puppet.conf` file.
+This module provides the puppet_conf task.
 
-## Requirements
+## Module Description
+
+The puppet_conf task allows you to inspect and change the configuration options in the `puppet.conf` file.
+
+## Setup
+
+### Requirements
 
 This module is compatible with Puppet Enterprise and Puppet Bolt.
 
@@ -23,6 +31,10 @@ This module is compatible with Puppet Enterprise and Puppet Bolt.
 * To run tasks with Puppet Bolt, Bolt 1.0 or later must be installed on the machine from which you are running task commands. Machines receiving task requests must have SSH or WinRM services enabled.
 
 ## Usage
+
+To view the available actions and parameters, on the command line, run `puppet task show puppet_conf` or see the puppet_conf module page on the [Forge](https://forge.puppet.com/puppetlabs/puppet_conf/tasks).
+For a complete list of `puppet.conf` options, see the [`puppet.conf`](https://docs.puppet.com/puppet/latest/config_file_main.html) documentation.
+To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
 
 To run a puppet_conf task, use the task command, specifying the action, section, and setting of the `puppet.conf` setting.
 
@@ -43,9 +55,7 @@ You can also run tasks in the PE console. See PE task documentation for complete
 
 ## Reference
 
-To view the available actions and parameters, on the command line, run `puppet task show puppet_conf` or see the puppet_conf module page on the [Forge](https://forge.puppet.com/puppetlabs/puppet_conf/tasks).
-
-For a complete list of `puppet.conf` options, see the [`puppet.conf`](https://docs.puppet.com/puppet/latest/config_file_main.html) documentation.
+For information on the classes and types, see the [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-puppet_conf/blob/master/REFERENCE.md).
 
 ## Limitations
 
@@ -53,8 +63,6 @@ To run acceptance tests against Windows machines, ensure that the `BEAKER_passwo
 
 For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-puppet_conf/blob/master/metadata.json)
 
-## Getting Help
+## Development
 
-To display help for the package task, run `puppet task show puppet_conf`
-
-To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
+Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. To contribute to Puppet projects, see our [module contribution guide.](https://github.com/puppetlabs/puppetlabs-puppet_conf/blob/master/CONTRIBUTING.md)
