@@ -1,34 +1,30 @@
 require 'spec_helper_acceptance'
 
 describe 'puppet_conf task' do
-  include Beaker::TaskHelper::Inventory
-  include BoltSpec::Run
-
   describe 'puppet_conf' do
     it 'set/get a puppet configuration' do
-      result = task_run('puppet_conf', 'action' => 'set', 'setting' => 'vardir', 'value' => '/tmp/bla')
+      result = run_bolt_task('puppet_conf', 'action' => 'set', 'setting' => 'vardir', 'value' => '/tmp/bla')
+      expect(result.exit_code).to eq(0)
+      expect(result['result']['status']).to match %r{.*/tmp/bla}
+      expect(result['result']).to include 'setting' => 'vardir', 'section' => 'main'
 
-      expect(result.first['status']).to eq 'success'
-      expect(result.first['result']['status']).to match %r{.*/tmp/bla}
-      expect(result.first['result']).to include 'setting' => 'vardir', 'section' => 'main'
+      result = run_bolt_task('puppet_conf', 'action' => 'get', 'setting' => 'vardir')
 
-      result = task_run('puppet_conf', 'action' => 'get', 'setting' => 'vardir')
-
-      expect(result.first['status']).to eq 'success'
-      expect(result.first['result']['status']).to match %r{.*/tmp/bla}
-      expect(result.first['result']).to include 'setting' => 'vardir', 'section' => 'main'
+      expect(result.exit_code).to eq(0)
+      expect(result['result']['status']).to match %r{.*/tmp/bla}
+      expect(result['result']).to include 'setting' => 'vardir', 'section' => 'main'
     end
 
     it 'set/get a puppet configuration with section' do
-      result = task_run('puppet_conf', 'action' => 'set', 'setting' => 'storeconfigs', 'value' => 'false', 'section' => 'master')
+      result = run_bolt_task('puppet_conf', 'action' => 'set', 'setting' => 'storeconfigs', 'value' => 'false', 'section' => 'master')
 
-      expect(result.first['status']).to eq 'success'
-      expect(result.first['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
+      expect(result.exit_code).to eq(0)
+      expect(result['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
 
-      result = task_run('puppet_conf', 'action' => 'get', 'setting' => 'storeconfigs', 'section' => 'master')
+      result = run_bolt_task('puppet_conf', 'action' => 'get', 'setting' => 'storeconfigs', 'section' => 'master')
 
-      expect(result.first['status']).to eq 'success'
-      expect(result.first['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
+      expect(result.exit_code).to eq(0)
+      expect(result['result']).to include 'status' => 'false', 'setting' => 'storeconfigs', 'section' => 'master'
     end
   end
 end
