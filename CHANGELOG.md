@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [0.3.1](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/0.3.1) (2019-04-04)
+## [v0.4.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v0.4.0) (2019-09-26)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/0.3.1...v0.4.0)
+
+### Changed
+
+- pdksync - \(MODULES-8444\) - Raise lower Puppet bound [\#65](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/65) ([david22swan](https://github.com/david22swan))
+
+### Added
+
+- \(FM-8227\)Port to litmus [\#74](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/74) ([sheenaajay](https://github.com/sheenaajay))
+- \(FM-8157\) Add Windows Server 2019 support [\#69](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/69) ([eimlav](https://github.com/eimlav))
+- \(FM-8045\) Add Redhat8 support [\#68](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/68) ([sheenaajay](https://github.com/sheenaajay))
+
+### Fixed
+
+- FM-7947 - stringify puppet\_conf [\#67](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/67) ([lionce](https://github.com/lionce))
+
+## [0.3.1](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/0.3.1) (2019-04-05)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/0.3.0...0.3.1)
 
