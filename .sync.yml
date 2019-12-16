@@ -90,6 +90,10 @@
     sudo: required
     stage: acceptance
   simplecov: true
+  notifications:
+    slack:
+      secure: >-
+        mcqiGIDFoMEYXxvjyB//JeQ9P4pF74bJkqAvstX0Po5qZjUpLs45bB05yZJlfE2mU+eJ2JNlcOajfy4b7FeaoIWI8V3kAqqOrWDOt9/6myAebmWtWfzjE6SAHkpWkT09LFDoYKalNAtb/prt8Em8hlc3Id20Hbsab5BYy/5gixArU5rDv4GJcXQalf/cmeY9vJk1N4W1dDNjUKkBPZ28cwph5DQM8tdGPfrag0L0dZJ6E1NJPXS8nL3fUH3T3nqIp+UKLbefKVT28q2DNkYBJ0KY1Cbh9w16/z2XGkGbqNzEfqJPAzy0OVd5wm0R428p8S/3ch5RayiUmLDF9G5j7pSt3Fnp9mrcb4gO2FFWNUBaq/lF4/R3/r7gXo0i99DeHvERYLWb7EaQoDz7M25d9U2RxwkOdb15HOVY8AOzKT7NqqCxzz4drY/I8WftQ0zUALOLYBVJhMFpfpZzeG14ziL5nuJQVz8qAF2KqcuIeqCxZ8j4ggnczHO9WjMi3uL5fAf6LnGl9g+3jKrFF6G4r+lAKJTzh0WXCcM7bkREXhy0lRiSvP5rFWBugtEm+YX7E/p5dbjtwiQ9d9KOJQ8OOk+tUACDZKVbXyizGXvsR8aa25Yl6y0pAewVwmzlCO/VZhLu8o83cP0wOiUVUSbEjyRj3Vni5FxIaj2Sr5slyaQ=
 ".yardopts":
   optional:
   - "--output-dir docs/"
