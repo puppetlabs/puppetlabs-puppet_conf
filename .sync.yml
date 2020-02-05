@@ -2,6 +2,8 @@
 ".gitlab-ci.yml":
   delete: true
 ".travis.yml":
+  global_env: 
+    - HONEYCOMB_WRITEKEY="7f3c63a70eecc61d635917de46bea4e6",HONEYCOMB_DATASET="litmus tests"
   deploy_to_forge:
     enabled: false
   branches:
@@ -53,7 +55,7 @@
     stage: acceptance
   - bundler_args: 
     dist: trusty
-    env: PLATFORMS=ib_puppet6
+    env: PLATFORMS=ub_puppet6
     rvm: 2.5.3
     before_script:
     - bundle exec rake 'litmus:provision_list[travis_ub]'
@@ -122,6 +124,9 @@
   optional:
   - "--output-dir docs/"
 appveyor.yml:
+  environment:
+    HONEYCOMB_WRITEKEY: 7f3c63a70eecc61d635917de46bea4e6
+    HONEYCOMB_DATASET: litmus tests
   simplecov: true
 Gemfile:
   optional:
