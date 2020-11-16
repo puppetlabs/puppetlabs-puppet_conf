@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.7.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v0.6.0) (2020-11-16)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v0.6.0...v0.6.0)
+
+### Added
+
+- \(IAC-1002\) - Removal of inappropriate terminology [\#119](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/119) ([david22swan](https://github.com/david22swan))
+
+## [v0.6.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v0.6.0) (2019-12-09)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v0.5.0...v0.6.0)
+
 ## [v0.5.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v0.5.0) (2019-12-09)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v0.4.0...v0.5.0)
