@@ -24,7 +24,7 @@ travis_ub:
 travis_el6:
   provisioner: docker
   images:
-  - centos:6
+  - centos:centos6.9
   - oraclelinux:6
   - scientificlinux/sl:6
 travis_el7:
