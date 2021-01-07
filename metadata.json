@@ -69,6 +69,6 @@
   ],
   "description": "Tasks that manipulates a puppet configuration file",
   "pdk-version": "1.18.1",
-  "template-url": "https://github.com/puppetlabs/pdk-templates#main",
-  "template-ref": "heads/main-0-g4543421"
+  "template-url": "https://github.com/DavidS/pdk-templates#bundler-with-config",
+  "template-ref": "remotes/origin/bundler-with-config-0-gce09aa3"
 }
