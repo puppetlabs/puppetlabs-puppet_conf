@@ -10,7 +10,7 @@
 
 ## Tasks
 
-### `init`
+### <a name="init"></a>`init`
 
 Inspect puppet agent configuration settings
 
