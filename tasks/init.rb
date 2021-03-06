@@ -79,7 +79,7 @@ section = 'main' if section.nil?
 begin
   result = if action == 'get'
              get(setting, section, value)
-	   elsif action == 'delete'
+           elsif action == 'delete'
              delete(setting, section, value)
            else
              raise Puppet::Error, 'You must pass a value argument' if value.nil?
