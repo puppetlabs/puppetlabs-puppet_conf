@@ -32,7 +32,8 @@ describe 'puppet_conf task' do
 
       result = run_bolt_task('puppet_conf', 'action' => 'delete', 'setting' => 'storeconfigs', 'section' => 'server')
       expect(result.exit_code).to eq(0)
-      expect(result['result']).to include 'status' => 'Deleted', 'setting' => 'storeconfigs', 'section' => 'server'
+      expect(result['result']['status']).to match %r{.*Deleted.*storeconfigs.*}
+      expect(result['result']).to include 'setting' => 'storeconfigs', 'section' => 'server'
     end
   end
 end
