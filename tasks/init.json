@@ -3,8 +3,8 @@
   "input_method": "stdin",
   "parameters": {
     "action": {
-      "description": "The operation (get, set) to perform on the configuration setting",
-      "type": "Enum[get, set]"
+      "description": "The operation (get, set, delete) to perform on the configuration setting",
+      "type": "Enum[get, set, delete]"
     },
     "section": {
       "description": "The section of the config file. Defaults to main",

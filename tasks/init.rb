@@ -60,6 +60,15 @@ def get(setting, section, _value)
   { status: stdout.strip, setting: setting, section: section }
 end
 
+def delete(setting, section, _value)
+  cmd = [puppet_cmd, 'config', 'delete']
+  cmd += ['--section', section]
+  cmd += [setting]
+  stdout, stderr, status = Open3.capture3(*cmd)
+  raise Puppet::Error, stderr if status != 0
+  { status: stdout.strip, setting: setting, section: section }
+end
+
 params = JSON.parse(STDIN.read)
 action = params['action']
 setting = params['setting']
@@ -70,6 +79,8 @@ section = 'main' if section.nil?
 begin
   result = if action == 'get'
              get(setting, section, value)
+	   elsif action == 'delete'
+             delete(setting, section, value)
            else
              raise Puppet::Error, 'You must pass a value argument' if value.nil?
              set(setting, section, value)
