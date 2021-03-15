@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v1.0.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.0.0) (2021-02-27)
+## [v1.1.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.1.0) (2021-03-13)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v1.0.0...v1.1.0)
+
+### Added
+
+- Add delete action [\#140](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/140) ([fetzerms](https://github.com/fetzerms))
+
+## [v1.0.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.0.0) (2021-03-01)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v0.8.0...v1.0.0)
 
@@ -17,10 +25,6 @@ All notable changes to this project will be documented in this file. The format 
 ### Added
 
 - pdksync - \(feat\) Add support for Puppet 7 [\#125](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/125) ([daianamezdrea](https://github.com/daianamezdrea))
-
-### Fixed
-
-- pdksync - \(FM-7655\) Fix rubygems-update for ruby \< 2.3 [\#46](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/46) ([tphoney](https://github.com/tphoney))
 
 ## [v.0.7.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v.0.7.0) (2020-11-16)
 
@@ -63,6 +67,10 @@ All notable changes to this project will be documented in this file. The format 
 ## [0.3.1](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/0.3.1) (2019-04-05)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/0.3.0...0.3.1)
+
+### Fixed
+
+- pdksync - \(FM-7655\) Fix rubygems-update for ruby \< 2.3 [\#46](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/46) ([tphoney](https://github.com/tphoney))
 
 ## [0.3.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/0.3.0) (2018-09-27)
 

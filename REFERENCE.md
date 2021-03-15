@@ -20,9 +20,9 @@ Inspect puppet agent configuration settings
 
 ##### `action`
 
-Data type: `Enum[get, set]`
+Data type: `Enum[get, set, delete]`
 
-The operation (get, set) to perform on the configuration setting
+The operation (get, set, delete) to perform on the configuration setting
 
 ##### `section`
 
