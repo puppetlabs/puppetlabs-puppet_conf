@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.2.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.2.0) (2021-08-25)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v1.1.0...v1.2.0)
+
+### Added
+
+- pdksync - \(IAC-1720\) - Add Support for Ubuntu 20.04 [\#159](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/159) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1709\) - Add Support for Debian 11 [\#157](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/157) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1719\) - Add Support for Debian 10 [\#156](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/156) ([david22swan](https://github.com/david22swan))
+
 ## [v1.1.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.1.0) (2021-03-13)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v1.0.0...v1.1.0)
