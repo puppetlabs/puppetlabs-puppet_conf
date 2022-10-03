@@ -2,23 +2,33 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v1.3.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.3.0) - 2022-05-16
+## [v1.4.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.4.0) (2022-10-03)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v1.3.0...v1.4.0)
+
+### Added
+
+- pdksync - \(GH-cat-11\) Certify Support for Ubuntu 22.04 [\#176](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/176) ([david22swan](https://github.com/david22swan))
+- pdksync - \(GH-cat-12\) Add Support for Redhat 9 [\#175](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/175) ([david22swan](https://github.com/david22swan))
+
+### Fixed
+
+- \(MAINT\) Dropped support for windows server 2008 R2. [\#177](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/177) ([jordanbreen28](https://github.com/jordanbreen28))
+
+## [v1.3.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.3.0) (2022-05-16)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v1.2.0...v1.3.0)
 
 ### Added
 
-- pdksync - (IAC-1753) - Add Support for AlmaLinux 8 [#163](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/163) ([david22swan](https://github.com/david22swan))
-
-- pdksync - (IAC-1751) - Add Support for Rocky 8 [#162](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/162) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1753\) - Add Support for AlmaLinux 8 [\#163](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/163) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1751\) - Add Support for Rocky 8 [\#162](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/162) ([david22swan](https://github.com/david22swan))
 
 ### Fixed
 
-- pdksync - (GH-iac-334) Remove Support for Ubuntu 14.04/16.04 [#166](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/166) ([david22swan](https://github.com/david22swan))
-
-- pdksync - (IAC-1787) Remove Support for CentOS 6 [#164](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/164) ([david22swan](https://github.com/david22swan))
-
-- pdksync - (IAC-1598) - Remove Support for Debian 8 [#161](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/161) ([david22swan](https://github.com/david22swan))
+- pdksync - \(GH-iac-334\) Remove Support for Ubuntu 14.04/16.04 [\#166](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/166) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1787\) Remove Support for CentOS 6 [\#164](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/164) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1598\) - Remove Support for Debian 8 [\#161](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/161) ([david22swan](https://github.com/david22swan))
 
 ## [v1.2.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v1.2.0) (2021-08-25)
 
