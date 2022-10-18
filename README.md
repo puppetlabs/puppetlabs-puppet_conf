@@ -59,8 +59,6 @@ For information on the classes and types, see the [REFERENCE.md](https://github.
 
 ## Limitations
 
-To run acceptance tests against Windows machines, ensure that the `BEAKER_password` environment variable has been set to the password of the Administrator user of the target machine.
-
 For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-puppet_conf/blob/main/metadata.json)
 
 ## Development
