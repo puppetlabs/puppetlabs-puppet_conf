@@ -32,8 +32,3 @@ RSpec/ExampleLength:
 # Offense count: 2
 RSpec/MultipleExpectations:
   Max: 9
-
-# Offense count: 1
-Style/MixinUsage:
-  Exclude:
-    - 'spec/spec_helper.rb'
