@@ -72,7 +72,7 @@ def delete(setting, section, _value)
   { status: stdout.strip, setting: setting, section: section }
 end
 
-params = JSON.parse(STDIN.read)
+params = JSON.parse($stdin.read)
 action = params['action']
 setting = params['setting']
 section = params['section']
