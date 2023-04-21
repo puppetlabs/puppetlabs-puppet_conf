@@ -48,6 +48,7 @@ def set(setting, section, value)
   cmd += [setting, value]
   _stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
+
   { status: value, setting: setting, section: section }
 end
 
@@ -57,6 +58,7 @@ def get(setting, section, _value)
   cmd += [setting]
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
+
   { status: stdout.strip, setting: setting, section: section }
 end
 
@@ -66,6 +68,7 @@ def delete(setting, section, _value)
   cmd += [setting]
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
+
   { status: stdout.strip, setting: setting, section: section }
 end
 
@@ -83,6 +86,7 @@ begin
              delete(setting, section, value)
            else
              raise Puppet::Error, 'You must pass a value argument' if value.nil?
+
              set(setting, section, value)
            end
   puts result.to_json
