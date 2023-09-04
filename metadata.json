@@ -5,6 +5,7 @@
   "summary": "Tasks that manipulates a puppet configuration file",
   "license": "Apache-2.0",
   "source": "https://github.com/puppetlabs/puppetlabs-puppet_conf",
+  "issues_url": "https://github.com/puppetlabs/puppetlabs-puppet_conf/issues",
   "dependencies": [
 
   ],
