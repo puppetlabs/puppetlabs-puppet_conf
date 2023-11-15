@@ -14,7 +14,7 @@
       "description": "The name of the config entry to set/get",
       "type": "String[1]"
     },
-     "value": {
+    "value": {
       "description": "The value you are setting. Only required for set",
       "type": "Optional[String[1]]"
     }
