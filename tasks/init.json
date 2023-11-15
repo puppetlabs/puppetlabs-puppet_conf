@@ -16,7 +16,7 @@
     },
     "value": {
       "description": "The value you are setting. Only required for set",
-      "type": "Optional[String[1]]"
+      "type": "Optional[Variant[String[1], Boolean]]"
     }
   }
 }
