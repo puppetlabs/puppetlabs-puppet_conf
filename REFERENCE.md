@@ -38,7 +38,7 @@ The name of the config entry to set/get
 
 ##### `value`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1], Boolean]]`
 
 The value you are setting. Only required for set
 
