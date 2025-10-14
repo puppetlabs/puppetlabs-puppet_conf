@@ -49,7 +49,7 @@ def set(setting, section, value)
   _stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: value, setting: setting, section: section }
+  { status: value, setting:, section: }
 end
 
 def get(setting, section, _value)
@@ -59,7 +59,7 @@ def get(setting, section, _value)
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: stdout.strip, setting: setting, section: section }
+  { status: stdout.strip, setting:, section: }
 end
 
 def delete(setting, section, _value)
@@ -69,7 +69,7 @@ def delete(setting, section, _value)
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: stdout.strip, setting: setting, section: section }
+  { status: stdout.strip, setting:, section: }
 end
 
 params = JSON.parse($stdin.read)
