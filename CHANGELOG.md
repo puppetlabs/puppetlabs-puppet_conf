@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v3.0.0) - 2026-09-02
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v2.1.0...v3.0.0)
+
+### Changed
+
+- (CAT-2387) Prepare module for Puppetcore / Drop Support for Puppet 7 [#223](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/223) ([SugatD](https://github.com/SugatD))
+
+### Added
+
+- (MODULES-11736) Add Puppet 9 support [#225](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/225) ([imaqsood](https://github.com/imaqsood))
+
 ## [v2.1.0](https://github.com/puppetlabs/puppetlabs-puppet_conf/tree/v2.1.0) - 2024-12-17
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-puppet_conf/compare/v2.0.0...v2.1.0)
