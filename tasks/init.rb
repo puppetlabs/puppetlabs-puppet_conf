@@ -49,7 +49,12 @@ def set(setting, section, value)
   _stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: value, setting:, section: }
+  # Not Ruby 3.1's hash-value-omission shorthand (setting:, section:): this task's Ruby source
+  # runs via the *target's own* bundled Ruby (not the Forge-polyglot build tooling), which on
+  # older agents (Linux puppet-agent, Windows puppet-agent, EL7, etc.) doesn't support it --
+  # confirmed via a real comply-e2e run: "syntax error, unexpected ','" at this exact line, for
+  # every Linux/Windows agent target. Spelled out for compatibility.
+  { status: value, setting: setting, section: section }
 end
 
 def get(setting, section, _value)
@@ -59,7 +64,7 @@ def get(setting, section, _value)
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: stdout.strip, setting:, section: }
+  { status: stdout.strip, setting: setting, section: section }
 end
 
 def delete(setting, section, _value)
@@ -69,7 +74,7 @@ def delete(setting, section, _value)
   stdout, stderr, status = Open3.capture3(*cmd)
   raise Puppet::Error, stderr if status != 0
 
-  { status: stdout.strip, setting:, section: }
+  { status: stdout.strip, setting: setting, section: section }
 end
 
 params = JSON.parse($stdin.read)
